@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Fragment, Component } from 'react'
+import { Link } from 'react-router-dom'
 
 export class User extends Component {
     componentDidMount() {
@@ -21,7 +22,13 @@ export class User extends Component {
             hireable
         } = this.props.user
         return (
-            <div>{name}</div>
+            <Fragment>
+                <Link to='/' className="btn btn-light">
+                    back to search
+            </Link>
+                Hireable: 
+                {hireable ? <i className='fas fa-check text-success' /> : <i className='fas fa-times-circle text-danger' />}
+            </Fragment>
         )
     }
 }
