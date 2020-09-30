@@ -70,8 +70,8 @@ const GithubState = props => {
         }}
 
     >
-        {props.children}
-
+    
+    {props.children}
     </GithubContext.Provider>
     );
 };
